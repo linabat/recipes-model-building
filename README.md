@@ -1,10 +1,8 @@
-# recipes-model-building
-
 <h1>Model Building ~ Recipies and Average Ratings </h1>	
 <h4 id="creators">By: Lina Battikha & Nicole Reardon </h4>
 <h5><em> The datasets that were used throughout this project can be found here: <a href = "https://dsc80.com/project3/recipes-and-ratings/food.com">food.com</a></em></h5>
 
-<h5> Our exploratory data analysis on this dataset can be found</h5> <a href = "https://nicolereardon.github.io/Recipe-Ratings-Over-Time-EDA/">here</a>.
+<h5> Our exploratory data analysis on this dataset can be found</h5> <a href = "https://nicolereardon.github.io/Recipe-Ratings-Over-Time-EDA/"><b>here</b></a>.
 
 
 
@@ -14,12 +12,6 @@
 		table-layout: fixed; 
 		border-collapse: collapse;
 		width: 150%;
-        /*margin-left: auto;
-        margin-right: auto;
-*/      
-/*		word-wrap: break-word;*/
-
-/*        margin-right:auto;*/
         margin-right:60%;
         overflow: scroll;
 		/*width: 100; 
