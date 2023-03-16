@@ -4,8 +4,125 @@
 
 <h5> Our exploratory data analysis on this dataset can be found</h5> <a href = "https://nicolereardon.github.io/Recipe-Ratings-Over-Time-EDA/"><strong>here</strong></a>.
 
+
 <h1>Problem Prediction</h1>
 <p> We decided that the focus of this project will inferential analysis. We did so by using a regression model with average rating as our response variable. We chose this response variable as we wanted to see which predictor variable had the biggest impact on the response variable. Furthermore, we believe that Average Rating provides a good numerical summary of the recipe as a whole because it's a direct indication of how favored a recipe is. Since this is an inferential analysis project, we are not limited to a  "time of prediction" and will have all predictor variables available to us to incorporate in our model.</p>
+
+
+<p>To continue with our analysis, we decided to only keep data points that were up until the 95% percentile for the columns of protein, sugar, minutes, soidum, and calories. This is because  the values that were of the higher extremes in this columns were likely due to unfaithful data. If we had kept these values, it is likely the our analysis would have been incorrect. 
+
+In addition to thise, we also added in a new column into our dataset that counted the number of reviews for each recipe as we believe that knowing the number of reviews per recipe can help our inferential analysis. 
+</p>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>id</th>
+      <th>minutes</th>
+      <th>n_steps</th>
+      <th>n_ingredients</th>
+      <th>average_rating</th>
+      <th>calories (#)</th>
+      <th>total fat (PDV)</th>
+      <th>sugar (PDV)</th>
+      <th>sodium (PDV)</th>
+      <th>protein (PDV)</th>
+      <th>saturated fat (PDV)</th>
+      <th>carbohydrates (PDV)</th>
+      <th>rating</th>
+      <th>n_tags</th>
+      <th>review_count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>333281</td>
+      <td>40</td>
+      <td>10</td>
+      <td>9</td>
+      <td>4.0</td>
+      <td>138.4</td>
+      <td>10.0</td>
+      <td>50.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>19.0</td>
+      <td>6.0</td>
+      <td>[4,5] rating</td>
+      <td>14</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>453467</td>
+      <td>45</td>
+      <td>12</td>
+      <td>11</td>
+      <td>5.0</td>
+      <td>595.1</td>
+      <td>46.0</td>
+      <td>211.0</td>
+      <td>22.0</td>
+      <td>13.0</td>
+      <td>51.0</td>
+      <td>26.0</td>
+      <td>[4,5] rating</td>
+      <td>9</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>306168</td>
+      <td>40</td>
+      <td>6</td>
+      <td>9</td>
+      <td>5.0</td>
+      <td>194.8</td>
+      <td>20.0</td>
+      <td>6.0</td>
+      <td>32.0</td>
+      <td>22.0</td>
+      <td>36.0</td>
+      <td>3.0</td>
+      <td>[4,5] rating</td>
+      <td>10</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <td>286009</td>
+      <td>120</td>
+      <td>7</td>
+      <td>7</td>
+      <td>5.0</td>
+      <td>878.3</td>
+      <td>63.0</td>
+      <td>326.0</td>
+      <td>13.0</td>
+      <td>20.0</td>
+      <td>123.0</td>
+      <td>39.0</td>
+      <td>[4,5] rating</td>
+      <td>20</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>475785</td>
+      <td>90</td>
+      <td>17</td>
+      <td>13</td>
+      <td>5.0</td>
+      <td>267.0</td>
+      <td>30.0</td>
+      <td>12.0</td>
+      <td>12.0</td>
+      <td>29.0</td>
+      <td>48.0</td>
+      <td>2.0</td>
+      <td>[4,5] rating</td>
+      <td>10</td>
+      <td>2.0</td>
+    </tr>
+  </tbody>
+</table>
+
 
 <p>The metric we used to evaluate our inferential analysis is R-squared. This is because R-squared provides a numerical number that tells us how well the predictor variables that we were using in the model explains the variation in the response variable. We chose this metric over Root Mean Squared Error (RMSE) because R-squared provides a direct numerical indication of how well the predictor variables can be explained our response variable of average rating.</p>
 
@@ -24,9 +141,11 @@
 	<li> <strong>R-Squared of test set = -4.259 * 10<sup>-6</sup></strong></li>
 </ul>
 
-<p>We do believe this mode is good because of the incredibly small R-squared values that we got for both training and test sets. Also, for this model we looked at RMSE and for both training and test sets, we received a relatively high number. However, since the RMSE numbers for both training and test are very close, this indicates that our model was not overfitted on training data. </p>
+<p>We believe this model is not good because of the incredibly small R-squared values that we got for both training and test sets. Also, for this model we looked at RMSE and for both training and test sets, we received a relatively high number. However, since the RMSE numbers for both training and test are very close, this indicates that our model was not overfitted on training data. </p>
 
+<h1>Final Model</h1>
 
+<h1>Fairness Analysis</h1>
 
 
 
