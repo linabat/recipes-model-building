@@ -19,9 +19,9 @@
 <p>The results of our baseline model for both training and test sets are below. </p>
 <ul>
 	<li> <strong>RMSE of training set = 0.637</strong></li>
-	<li> <strong>R-Squared of training set = 4.901 * <var>10</var><sup>-5</sup></strong></li>
+	<li> <strong>R-Squared of training set = 4.901 * 10<sup>-5</sup></strong></li>
 	<li> <strong>RMSE of test set = 0.651</strong></li>
-	<li> <strong>R-Squared of test set = -4.259 * <var>10</var><sup>-6</sup></strong></li>
+	<li> <strong>R-Squared of test set = -4.259 * 10<sup>-6</sup></strong></li>
 </ul>
 
 <p>We do believe this mode is good because of the incredibly small R-squared values that we got for both training and test sets. Also, for this model we looked at RMSE and for both training and test sets, we received a relatively high number. However, since the RMSE numbers for both training and test are very close, this indicates that our model was not overfitted on training data. </p>
