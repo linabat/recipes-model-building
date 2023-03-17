@@ -135,10 +135,10 @@ In addition to this, we also added in a new column into our dataset that counted
 
 <p>The results of our baseline model for both training and test sets are below. </p>
 <ul>
-	<li> <strong>RMSE of training set = 0.637</strong></li>
-	<li> <strong>R-Squared of training set = 4.901 * 10<sup>-5</sup></strong></li>
-	<li> <strong>RMSE of test set = 0.651</strong></li>
-	<li> <strong>R-Squared of test set = -4.259 * 10<sup>-6</sup></strong></li>
+	<li> <strong>RMSE of training set = 0.6397</strong></li>
+	<li> <strong>R-Squared of training set = 2.2709 * 10<sup>-5</sup></strong></li>
+	<li> <strong>RMSE of test set = 0.6437</strong></li>
+	<li> <strong>R-Squared of test set = 9.3928 * 10<sup>-10</sup></strong></li>
 </ul>
 
 <p>We believe this model is not good because of the incredibly small R-squared values that we got for both training and test sets. Also, for this model we looked at RMSE and for both training and test sets, we received a relatively high number. However, since the RMSE numbers for both training and test are very close, this indicates that our model was not overfitted on training data. </p>
@@ -171,10 +171,10 @@ In addition to this, we also added in a new column into our dataset that counted
 <p>To find these best hyperparameters, we used GridSearchCV. Our final model R-squared valued value improved by 457%. Our RMSE values sayed our relatively the same numbers of our baseline model. </p>
 <h5>The results of our final model for both training and test sets are below. </h5>
 <ul>
-<li> <strong>RMSE of training set = 0.637 CHANGE</strong></li> 
-<li> <strong>R-Squared of training set = CHANGE4.901 * 10<sup>-5</sup></strong></li>
-<li> <strong>RMSE of test set = 0.651</strong></li>
-<li> <strong>R-Squared of test set = -4.259 * 10 CHANGE<sup>-6</sup></strong></li>
+<li> <strong>RMSE of training set = 0.6279</strong></li> 
+<li> <strong>R-Squared of training set = 0.01320</strong></li>
+<li> <strong>RMSE of test set = 0.6345</strong></li>
+<li> <strong>R-Squared of test set = 0.01322</strong></li>
 </ul>
 
 
@@ -189,6 +189,7 @@ In addition to this, we also added in a new column into our dataset that counted
 <li><strong>Alternate Hypothesis: </strong>Our model is unfair.  There is a difference in R-Squared values between recipes with more than one interaction and recipes with only one interaction.</li>
 <li><strong>Test Statistic: </strong>The difference between R-Squared of recipes with just one review and recipes with more than 1 review.</li>
 <li><strong>Significance Level: </strong>0.05</li>
+<li><strong>Observed Test Statistic:</strong> 0.2716</li>
 <li><strong>P-value: INSERT</strong></li>
 <li><strong>Conclusion: </strong>We fail to reject the null hypothesis. There is not enough evidence to support that there is a significant difference between R-squared  values of our two groups.</li>
 
