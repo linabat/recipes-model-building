@@ -145,19 +145,54 @@ In addition to thise, we also added in a new column into our dataset that counte
 
 <h1>Final Model</h1>
 
+
+
+
+<h4>Our Plots Led to the Transformation of some Features</h4>
+<p>Before</p>
+<iframe src="review_count.html" width=800 height=600 frameBorder=0></iframe>
+<p>After</p>
+<iframe src="review_count_log.html" width=800 height=600 frameBorder=0></iframe>
+
+
 <h1>Fairness Analysis</h1>
+
+<p>The features we used and why we used each feature in our final model are listed below</p>
+<ul>
+<li><strong>Sugar, Sodium, Calories, Carbohydrates, and Protein - </strong>  We decided to use these features because they are the most popular nutritional categories that people generally focus on the most when trying a recipe. </li>
+<li><strong>Number of Steps, Ingredients, Minutes - </strong> These features can indicate the overall length and difficulty, which can influence people’s willingness to try and thus rate the recipe. The longer a recipe takes or the more steps and ingredients it requires can discourage some from trying the recipe. Quantile Transformer was applied to minutes as there is still a wide range of times, even excluding the outliers. Because Quantile Transformer spreads out the most frequent values and reduces the impact of outliers, it was used along with GridSearchCV to optimize the accuracy the best.</li>
+<li><strong>Number of Tags - </strong> This feature can widely impact how reachable it is. More tags likely increase the access people have to it, and thus increase the interaction the recipe gets. A Binarizer was used on this feature because there is likely a small marginal difference for the inclusion of another tag. Because of this GridSearchCV was applied to its threshold to optimize the prediction accuracy.</li>
+<li><strong>Review Count - </strong> We decided to create this feature from the Interactions dataset as having the number of reviews per recipe could impact the average rating. If there are only a few reviews for a recipe, then the average rating can be skewed to either high or low. Also,  a recipe with more reviews would tend to have higher reviews as more people are trying it out and it’s more popular, which can be an indication that people like the recipe. </li>
+</ul>
+
+
+<p>The model that we used for our analysis is a Linear Regression Model. We decided to use this model because after creating scatter plots with average rating on the y-axis and the different features we chose on the x-axis, we found that we can perform transformations on different features to create linear patterns. The hyperparameters that worked best for our model are listed below. </p>
+<ul>
+<li><strong>threshold</strong> for the Binarizer of Number of Tags:  4</li>
+<li><strong>n_quantiles</strong> for the QuantilieTransformer of Number of Minutes:  17</li>
+<ul> 
+<p>To find these best hyperparameters, we used GridSearchCV. Our final model R-squared valued value improved by 457%. Our RMSE values sayed our relatively the same numbers of our baseline model. </p>
+<h5>The results of our final model for both training and test sets are below. </h5>
+<ul>
+<li> <strong>RMSE of training set = 0.637 CHANGE</strong></li> 
+<li> <strong>R-Squared of training set = CHANGE4.901 * 10<sup>-5</sup></strong></li>
+<li> <strong>RMSE of test set = 0.651</strong></li>
+<li> <strong>R-Squared of test set = -4.259 * 10 CHANGE<sup>-6</sup></strong></li>
+</ul>
+
+
 
 <p>For our fairness analysis:</p>
 <ul>
-<li><strong>Group 1: Recipes that had a review count == 1</strong></li>
-<li><strong>Group 2: Recipes that had a review counts > 1</strong></li>
-<li><strong>Evaluation Metric: R-Squared</strong></li>
-<li><strong>Null Hypothesis: Our model is fair. There is no difference in R-Squared values between recipes with more than one interaction and recipes with only one interaction.</strong></li>
-<li><strong>Alternate Hypothesis: Our model is unfair.  There is a difference in R-Squared values between recipes with more than one interaction and recipes with only one interaction.</strong></li>
-<li><strong>Test Statistic: The difference between R-Squared of recipes with just one review and recipes with more than 1 review.</strong></li>
-<li><strong>Significance Level: 0.05</strong></li>
-<li><strong>P-value: </strong></li>
-<li><strong>Conclusion: We fail to reject the null hypothesis. There is not enough evidence to support that there is a significant difference between R-squared  values of our two groups.</strong></li>
+<li><strong>Group 1: </strong> Recipes that had a review count == 1</li>
+<li><strong>Group 2: </strong> Recipes that had a review counts > 1</li>
+<li><strong>Evaluation Metric: </strong> R-Squared</li>
+<li><strong>Null Hypothesis: </strong>Our model is fair. There is no difference in R-Squared values between recipes with more than one interaction and recipes with only one interaction.</li>
+<li><strong>Alternate Hypothesis: </strong>Our model is unfair.  There is a difference in R-Squared values between recipes with more than one interaction and recipes with only one interaction.</li>
+<li><strong>Test Statistic: </strong>The difference between R-Squared of recipes with just one review and recipes with more than 1 review.</li>
+<li><strong>Significance Level: </strong>0.05</li>
+<li><strong>P-value: INSERT</strong></li>
+<li><strong>Conclusion: </strong>We fail to reject the null hypothesis. There is not enough evidence to support that there is a significant difference between R-squared  values of our two groups.</li>
 
 
 
