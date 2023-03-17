@@ -190,7 +190,7 @@ In addition to this, we also added in a new column into our dataset that counted
 <li><strong>Test Statistic: </strong>The difference between R-Squared of recipes with just one review and recipes with more than 1 review.</li>
 <li><strong>Significance Level: </strong>0.05</li>
 <li><strong>Observed Test Statistic:</strong> 0.2716</li>
-<li><strong>P-value: INSERT</strong></li>
+<li><strong>P-value: 0.0</strong></li>
 <li><strong>Conclusion: </strong>We fail to reject the null hypothesis. There is not enough evidence to support that there is a significant difference between R-squared  values of our two groups.</li>
 
 
