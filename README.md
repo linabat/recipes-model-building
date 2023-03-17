@@ -182,7 +182,7 @@ In addition to thise, we also added in a new column into our dataset that counte
 
 <p>For our fairness analysis:</p>
 <ul>
-<li><strong>Group 1: </strong> Recipes that had a review count == 1</li>
+<li><strong>Group 1: </strong> Recipes that had a review count = 1</li>
 <li><strong>Group 2: </strong> Recipes that had a review counts > 1</li>
 <li><strong>Evaluation Metric: </strong> R-Squared</li>
 <li><strong>Null Hypothesis: </strong>Our model is fair. There is no difference in R-Squared values between recipes with more than one interaction and recipes with only one interaction.</li>
