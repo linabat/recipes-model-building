@@ -2,7 +2,7 @@
 <h4 id="creators">By: Lina Battikha & Nicole Reardon </h4>
 <h5><em> The datasets that were used throughout this project can be found here: <a href = "https://dsc80.com/project3/recipes-and-ratings/food.com">food.com</a></em></h5>
 
-<h5> Our exploratory data analysis on this dataset can be found</h5> <a href = "https://nicolereardon.github.io/Recipe-Ratings-Over-Time-EDA/"><strong>here</strong></a>.
+<h5> Our exploratory data analysis on this dataset can be found<a href = "https://nicolereardon.github.io/Recipe-Ratings-Over-Time-EDA/"><strong>here</strong></a>.</h5>
 
 
 <h1>Problem Prediction</h1>
@@ -11,7 +11,7 @@
 
 <p>To continue with our analysis, we decided to only keep data points that were up until the 95% percentile for the columns of protein, sugar, minutes, soidum, and calories. This is because  the values that were of the higher extremes in this columns were likely due to unfaithful data. If we had kept these values, it is likely the our analysis would have been incorrect. 
 
-In addition to thise, we also added in a new column into our dataset that counted the number of reviews for each recipe as we believe that knowing the number of reviews per recipe can help our inferential analysis. 
+In addition to this, we also added in a new column into our dataset that counted the number of reviews for each recipe as we believe that knowing the number of reviews per recipe can help our inferential analysis. 
 </p>
 
 <table border="1" class="dataframe">
