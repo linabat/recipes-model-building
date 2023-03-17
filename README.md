@@ -155,10 +155,10 @@ In addition to thise, we also added in a new column into our dataset that counte
 </ul>
 
 
-<h4>Our Plots Led to the Transformation of some Features</h4>
-<p>Before</p>
+<h4>Our Plots that Led to the Transformation of Some Features</h4>
+<p><strong>Before</strong></p>
 <iframe src="review_count.html" width=800 height=600 frameBorder=0></iframe>
-<p>After</p>
+<p><strong>After</strong></p>
 <iframe src="review_count_log.html" width=800 height=600 frameBorder=0></iframe>
 
 
@@ -167,7 +167,7 @@ In addition to thise, we also added in a new column into our dataset that counte
 <ul>
 <li><strong>threshold</strong> for the Binarizer of Number of Tags:  4</li>
 <li><strong>n_quantiles</strong> for the QuantilieTransformer of Number of Minutes:  17</li>
-<ul> 
+</ul> 
 <p>To find these best hyperparameters, we used GridSearchCV. Our final model R-squared valued value improved by 457%. Our RMSE values sayed our relatively the same numbers of our baseline model. </p>
 <h5>The results of our final model for both training and test sets are below. </h5>
 <ul>
