@@ -147,6 +147,19 @@ In addition to thise, we also added in a new column into our dataset that counte
 
 <h1>Fairness Analysis</h1>
 
+<p>For our fairness analysis:</p>
+<ul>
+<li><strong>Group 1: Recipes that had a review count == 1</strong></li>
+<li><strong>Group 2: Recipes that had a review counts > 1</strong></li>
+<li><strong>Evaluation Metric: R-Squared</strong></li>
+<li><strong>Null Hypothesis: Our model is fair. There is no difference in R-Squared values between recipes with more than one interaction and recipes with only one interaction.</strong></li>
+<li><strong>Alternate Hypothesis: Our model is unfair.  There is a difference in R-Squared values between recipes with more than one interaction and recipes with only one interaction.</strong></li>
+<li><strong>Test Statistic: The difference between R-Squared of recipes with just one review and recipes with more than 1 review.</strong></li>
+<li><strong>Significance Level: 0.05</strong></li>
+<li><strong>P-value: </strong></li>
+<li><strong>Conclusion: We fail to reject the null hypothesis. There is not enough evidence to support that there is a significant difference between R-squared  values of our two groups.</strong></li>
+
+
 
 
 <style> 
@@ -194,10 +207,10 @@ In addition to thise, we also added in a new column into our dataset that counte
       color: black;
     }
 
-
-	/*  .page {
-        @include container;
-    }*/
+	sup {
+	        vertical-align: super;
+	        font-size: small;
+	    }
 
 
 </style>
