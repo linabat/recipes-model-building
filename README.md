@@ -146,6 +146,13 @@ In addition to thise, we also added in a new column into our dataset that counte
 <h1>Final Model</h1>
 
 
+<p>The features we used and why we used each feature in our final model are listed below</p>
+<ul>
+<li><strong>Sugar, Sodium, Calories, Carbohydrates, and Protein - </strong>  We decided to use these features because they are the most popular nutritional categories that people generally focus on the most when trying a recipe. </li>
+<li><strong>Number of Steps, Ingredients, Minutes - </strong> These features can indicate the overall length and difficulty, which can influence people’s willingness to try and thus rate the recipe. The longer a recipe takes or the more steps and ingredients it requires can discourage some from trying the recipe. Quantile Transformer was applied to minutes as there is still a wide range of times, even excluding the outliers. Because Quantile Transformer spreads out the most frequent values and reduces the impact of outliers, it was used along with GridSearchCV to optimize the accuracy the best.</li>
+<li><strong>Number of Tags - </strong> This feature can widely impact how reachable it is. More tags likely increase the access people have to it, and thus increase the interaction the recipe gets. A Binarizer was used on this feature because there is likely a small marginal difference for the inclusion of another tag. Because of this GridSearchCV was applied to its threshold to optimize the prediction accuracy.</li>
+<li><strong>Review Count - </strong> We decided to create this feature from the Interactions dataset as having the number of reviews per recipe could impact the average rating. If there are only a few reviews for a recipe, then the average rating can be skewed to either high or low. Also,  a recipe with more reviews would tend to have higher reviews as more people are trying it out and it’s more popular, which can be an indication that people like the recipe. </li>
+</ul>
 
 
 <h4>Our Plots Led to the Transformation of some Features</h4>
@@ -154,16 +161,6 @@ In addition to thise, we also added in a new column into our dataset that counte
 <p>After</p>
 <iframe src="review_count_log.html" width=800 height=600 frameBorder=0></iframe>
 
-
-<h1>Fairness Analysis</h1>
-
-<p>The features we used and why we used each feature in our final model are listed below</p>
-<ul>
-<li><strong>Sugar, Sodium, Calories, Carbohydrates, and Protein - </strong>  We decided to use these features because they are the most popular nutritional categories that people generally focus on the most when trying a recipe. </li>
-<li><strong>Number of Steps, Ingredients, Minutes - </strong> These features can indicate the overall length and difficulty, which can influence people’s willingness to try and thus rate the recipe. The longer a recipe takes or the more steps and ingredients it requires can discourage some from trying the recipe. Quantile Transformer was applied to minutes as there is still a wide range of times, even excluding the outliers. Because Quantile Transformer spreads out the most frequent values and reduces the impact of outliers, it was used along with GridSearchCV to optimize the accuracy the best.</li>
-<li><strong>Number of Tags - </strong> This feature can widely impact how reachable it is. More tags likely increase the access people have to it, and thus increase the interaction the recipe gets. A Binarizer was used on this feature because there is likely a small marginal difference for the inclusion of another tag. Because of this GridSearchCV was applied to its threshold to optimize the prediction accuracy.</li>
-<li><strong>Review Count - </strong> We decided to create this feature from the Interactions dataset as having the number of reviews per recipe could impact the average rating. If there are only a few reviews for a recipe, then the average rating can be skewed to either high or low. Also,  a recipe with more reviews would tend to have higher reviews as more people are trying it out and it’s more popular, which can be an indication that people like the recipe. </li>
-</ul>
 
 
 <p>The model that we used for our analysis is a Linear Regression Model. We decided to use this model because after creating scatter plots with average rating on the y-axis and the different features we chose on the x-axis, we found that we can perform transformations on different features to create linear patterns. The hyperparameters that worked best for our model are listed below. </p>
@@ -181,6 +178,7 @@ In addition to thise, we also added in a new column into our dataset that counte
 </ul>
 
 
+<h1>Fairness Analysis</h1>
 
 <p>For our fairness analysis:</p>
 <ul>
