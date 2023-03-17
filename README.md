@@ -5,7 +5,7 @@
 <h5> Our exploratory data analysis on this dataset can be found<a href = "https://nicolereardon.github.io/Recipe-Ratings-Over-Time-EDA/"><strong>here</strong></a>.</h5>
 
 
-<h1>Problem Prediction</h1>
+<h1>Framing the Problem</h1>
 <p> We decided that the focus of this project will inferential analysis. We did so by using a regression model with average rating as our response variable. We chose this response variable as we wanted to see which predictor variable had the biggest impact on the response variable. Furthermore, we believe that Average Rating provides a good numerical summary of the recipe as a whole because it's a direct indication of how favored a recipe is. Since this is an inferential analysis project, we are not limited to a  "time of prediction" and will have all predictor variables available to us to incorporate in our model.</p>
 
 
