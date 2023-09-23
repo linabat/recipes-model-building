@@ -1,8 +1,9 @@
+<h5>You can view the complete websited <a href = "https://linabat.github.io/recipes-model-building/">here</a>.</h5>
 <h1>Model Building ~ Recipies and Average Ratings </h1>	
 <h4 id="creators">By: Lina Battikha & Nicole Reardon </h4>
 <h5><em> The datasets that were used throughout this project can be found here: <a href = "https://dsc80.com/project3/recipes-and-ratings/food.com">food.com</a></em></h5>
 
-<h5> Our exploratory data analysis on this dataset can be found<a href = "https://nicolereardon.github.io/Recipe-Ratings-Over-Time-EDA/"><strong>here</strong></a>.</h5>
+<h5> Our exploratory data analysis on this dataset can be found <a href = "https://nicolereardon.github.io/Recipe-Ratings-Over-Time-EDA/"><strong>here</strong></a>. To get a achieve a complete understanding on the work that we were doing, we encourage that you take a look at our EDA work before moving on here. </h5>
 
 
 <h1>Framing the Problem</h1>
